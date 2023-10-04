@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Rep_Accounts</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>SAP_Acct__c</columns>
+    <columns>Group_Key__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Sales_Rep_Commercial_Casting,Account.Sales_Rep_International,Account.Sales_Rep_Irrigation,Account.Sales_Rep_OEM_MHRV,Account.Sales_Rep_Retail,Account.Sales_Rep</value>
+    </filters>
+    <label>*Sales Rep Accounts</label>
+    <sharedTo>
+        <role>System_Administrator</role>
+        <role>Vice_Presidents</role>
+    </sharedTo>
+</ListView>

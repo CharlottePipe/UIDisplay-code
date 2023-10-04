@@ -1,0 +1,51 @@
+.dummy{
+	color : black;
+}
+.Customer_info{
+	display: flex;
+	gap: 30%;
+	margin-bottom: 40px;
+	font-size: 14px;
+}
+.header{
+	background-color: black;
+	color: #ffffff;
+}
+.slds-table{
+	font-size: 14px;
+	border-collapse: collapse;
+	border: 1px solid black;
+}
+.select{
+	cursor: pointer;
+}
+.slds-table_col-bordered{
+	color: black;
+}
+.slds-table-container {
+  max-width: 100%;
+  overflow-x: auto;
+}
+.pagination{
+	text-align: right;
+    margin-top: 10px;
+}
+.scroll{
+	overflow-x: auto;
+}
+.slds-align_absolute-center{
+	margin-bottom: 20%;
+}
+.submitBtn {
+  width: 10%;
+  padding: 10px 0px;
+  margin: 10px 10px 0px;
+  border-radius: 8px;
+  background-color: #0062E1;
+  color: #FFFFFF;
+  border: none;
+  outline: none;
+}
+.submitBtn:hover{
+   background:#014297;
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Distributor_Accounts_Irrigation</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>SAP_Acct__c</columns>
+    <columns>ACCOUNT.ADDRESS1_CITY</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE</columns>
+    <columns>Group_Key__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Distributor_Irrigation</value>
+    </filters>
+    <label>*Distributor Accounts - IR</label>
+    <sharedTo>
+        <role>Irrigation_Rep</role>
+        <roleAndSubordinates>Irrigation_Manager</roleAndSubordinates>
+    </sharedTo>
+</ListView>

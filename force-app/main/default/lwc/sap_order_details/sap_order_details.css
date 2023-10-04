@@ -1,0 +1,61 @@
+.dummy{
+	color : black;
+}
+.Order_info{
+	display: flex;
+	gap: 30%;
+	color: blue;
+	font-size: 14px;
+}
+ .main_details{
+	display: flex;
+	gap: 5%;
+	font-size: 14px;
+}
+.info{
+	display: flex;
+}
+.slds-table{
+	font-size: 14px;
+	border: 1px solid black;
+}
+.slds-truncate{
+	text-align: center;
+}
+.select{
+	cursor: pointer;
+}
+.header{
+	background-color: black;
+	color: #ffffff;
+}
+.pagination{
+	text-align: right;
+    margin-top: 10px;
+}
+.scroll{
+	overflow-x: auto;
+}
+.submitBtn {
+	margin-bottom: 15px;
+	cursor: pointer;
+	border: 1px solid grey;
+    padding: 3px;
+}
+
+.submitBtns {
+  width: 10%;
+  padding: 10px 0px;
+  margin: 10px 10px 0px;
+  border-radius: 8px;
+  background-color: #0062E1;
+  color: #FFFFFF;
+  border: none;
+  outline: none;
+}
+lightning-icon .slds-icon .slds-icon-text-default{
+	width: 25px;
+}
+.text-container {
+  white-space: pre-line; /* or white-space: pre-wrap; for more line spacing */
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Copy_of_RSM_18_Accounts</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE</columns>
+    <columns>Sales_Rep__c</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Regional_Sale_Manager__c</field>
+        <operation>equals</operation>
+        <value>18</value>
+    </filters>
+    <label>*RSM 18 Accounts</label>
+    <sharedTo>
+        <group>IS_CS_RSM_18_Sharing</group>
+    </sharedTo>
+</ListView>

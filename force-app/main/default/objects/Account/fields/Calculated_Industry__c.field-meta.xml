@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Calculated_Industry__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(Industry, &apos;CO&apos;, &apos;Commercial Castings&apos;, &apos;HA&apos;, &apos;Retail&apos;, &apos;HC&apos;, &apos;Retail&apos;, &apos;PB&apos;, &apos;Wholesale&apos;, &apos;IR&apos;, &apos;Irrigation&apos;, &apos;EX&apos;, &apos;International&apos;, &apos;OM&apos;, &apos;OM MHRV&apos;, &quot;MH&quot;, &apos;OM MHRV&apos;, &apos;&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Calculated Industry</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

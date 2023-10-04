@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VMI_Product_Category__c</fullName>
+    <externalId>false</externalId>
+    <label>VMI Product Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Plastic Pipe</fullName>
+                <default>false</default>
+                <label>Plastic Pipe</label>
+            </value>
+            <value>
+                <fullName>Plastic Fitting</fullName>
+                <default>false</default>
+                <label>Plastic Fitting</label>
+            </value>
+            <value>
+                <fullName>Cast Iron</fullName>
+                <default>false</default>
+                <label>Cast Iron</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

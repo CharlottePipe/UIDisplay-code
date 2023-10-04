@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SAP_Requirement</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+RecordType.Id = &quot;0126g000001Oog7&quot;, 
+ISBLANK(SAP_Acct__c)
+)</errorConditionFormula>
+    <errorDisplayField>SAP_Acct__c</errorDisplayField>
+    <errorMessage>Please add SAP Account Number</errorMessage>
+</ValidationRule>

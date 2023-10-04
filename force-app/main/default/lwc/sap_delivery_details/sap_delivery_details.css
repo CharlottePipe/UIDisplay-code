@@ -1,0 +1,86 @@
+.dummy{
+	color : black;
+}
+.full_information{
+		font-size: 14px;
+}
+.basic{
+	margin-left: 10px;
+}
+.delivery_info{
+	display: flex;
+	gap: 30%;
+	color: blue;
+}
+.inform{
+	display: flex;
+	gap: 100px;
+	padding-top: 20px;
+}
+.contact{
+	display: flex;
+	gap: 11%;
+}
+.link{
+	cursor: pointer;
+}
+.info{
+	display: flex;
+	gap: 125px;
+	padding-top: 20px;
+}
+.invoice{
+	display: flex;
+	gap: 88px;
+	padding-bottom: 20px;
+}
+.weight{
+	display: flex;
+	gap: 83px;
+}
+.deliver{
+	display: flex;
+	gap: 9%;
+}
+.Number{
+	display: flex;
+	gap: 10%;
+}
+.slds-table{
+	font-size: 14px;
+	border: 1px solid black;
+}
+.header{
+	background-color: black;
+	color: #ffffff;
+}
+.slds-truncate{
+	text-align: center;
+}
+.select{
+	cursor: pointer;
+}
+.pagination{
+	text-align: right;
+    margin-top: 10px;
+}
+.scroll{
+	overflow-x: auto;
+}
+.submitBtn {
+	margin-bottom: 15px;
+	cursor: pointer;
+	border: 1px solid grey;
+    padding: 2px;
+  /* width: 10%;
+  padding: 10px 0px;
+  margin: 10px 0px 0px;
+  border-radius: 8px;
+  background-color: #0062E1;
+  color: #FFFFFF;
+  border: none;
+  outline: none; */
+}
+.text-container {
+  white-space: pre-line; /* or white-space: pre-wrap; for more line spacing */
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ensxapp__SAP_Customer_Link</fullName>
+    <availability>online</availability>
+    <description>Button to go from account to SAP Customer Link page</description>
+    <displayType>button</displayType>
+    <height>600</height>
+    <linkType>page</linkType>
+    <masterLabel>SAP Customer Link</masterLabel>
+    <openType>sidebar</openType>
+    <page>ensxapp__VFP_Customer_Link_Redirect</page>
+    <protected>false</protected>
+</WebLink>

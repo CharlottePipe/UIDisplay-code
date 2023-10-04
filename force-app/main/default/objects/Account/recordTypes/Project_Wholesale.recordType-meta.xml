@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Wholesale</fullName>
+    <active>true</active>
+    <label>Project Wholesale</label>
+    <picklistValues>
+        <picklist>AccountSource</picklist>
+        <values>
+            <fullName>Advertisement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employee Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google AdWords</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Purchased List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Website</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Industry</picklist>
+        <values>
+            <fullName>EX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IR</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Int_l_Account_Type__c</picklist>
+        <values>
+            <fullName>Client%2FDeveloper</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consultant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government Contractor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Local Distributor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MEP Contractor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REP</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Ownership</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Private</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subsidiary</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rating</picklist>
+        <values>
+            <fullName>Cold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warm</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Regional_Sale_Manager__c</picklist>
+        <values>
+            <fullName>10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>18</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>32</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>35</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>36</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>38</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>40</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>43</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>45</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>50</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>52</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>60</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>65</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>70</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>80</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>85</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>95</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>99</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sales_Rep_if_applicable__c</picklist>
+        <values>
+            <fullName>BWA South Inc%0908</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Battersby Danielson Azbell %26 Associates%0985</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Billingsley BWC%0910</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Burke Agency Inc%0993</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Central Sales%2C Inc%0943</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Davenport Associates%0921</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Distributor Sales Inc%0924</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Empire State Associates%0948</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FERGUSON - METROPLEX%09114</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FERGUSON DIST CENTER%09102</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ferguson-Special%0914</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HSA%0947</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hollabaugh Brothers %26 Assoc%0956</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hugh M Cunningham%0913</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Johnson %26 White Sales Co%0942</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Joyce Agency Inc%0905</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maloney %26 Curcio Inc%0973</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Martin %26 Smith Inc%0950</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mega Western Sales%0962</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mid-America Marketing Inc%0951</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Noland-CDC%0917</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OK Grp%2FHM Cunningham%0968</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>P-M %26 Associates%0923</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pacific Rim Partners%0992</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paramount Sales%0958</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Platsky Company%0974</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pulley %26 Associates Inc%0965</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RKR%0975</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RMI%0944</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rich Sales Inc%0969</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Smith %26 Stevenson Co Inc%0988</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Southern Dist Center%09101</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Southwestern Mechanical Sales%0964</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spirit Group Inc%0989</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T J Higgins Company%0981</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Triumph Sales Inc%0957</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UNITED PIPE AND STEEL%09115</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Will %26 Pierce Agency%0961</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>TSD_Account_Type__c</picklist>
+        <values>
+            <fullName>Architect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Codes %26 Standards</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engineering Firm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Facilities%2FEnd User</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Industry Organization</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manufacturer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manufacturer Rep</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>VMI_Product_Category__c</picklist>
+        <values>
+            <fullName>Cast Iron</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plastic Fitting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plastic Pipe</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

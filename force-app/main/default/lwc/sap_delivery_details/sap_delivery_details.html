@@ -1,0 +1,191 @@
+<template>
+	<template if:false={navagatetosapinfo}>
+	<template if:false={showchild}>
+	 <div class="exampleHolder">
+        <lightning-spinner if:true={isLoading} alternative-text="Loading" size="large"></lightning-spinner>
+    </div>
+<lightning-card>
+		<!-- <button onclick={navigatetoSapInfo} class="submitBtn">back to </button> -->
+    <lightning-icon icon-name="utility:chevronleft" class="submitBtn slds-m-right_large" alternative-text="SapOrderDetails" data-name={jsonBData.Order} data-index ={index} onclick={navigateSapOrder} >Back To Sap Order</lightning-icon>
+    <lightning-icon icon-name="utility:home" class="submitBtn" alternative-text="BackTohome" onclick={navigatetoSapInfo} >Back To Home</lightning-icon>
+
+    <div class="full_information">
+ <div class="delivery_info slds-p-horizontal_small slds-m-bottom_large"> 
+            <ul class="details">
+             <li> <b> Sold To: </b> </li>
+            <li class="text-container"> {topDetails.soldTo} </li>
+            <!-- <li> 290 ANSIN ROAD </li>
+            <li> ROCKLEDGE FL 32955 </li>
+            <li> US </li> -->
+            </ul>   
+            <ul>
+             <li> <b> Ship To: </b> </li>
+            <li class="text-container">{topDetails.shipTo} </li>
+            <!-- <li> 290 ANSIN ROAD </li>
+            <li> ROCKLEDGE FL 32955 </li>
+            <li> US </li> -->
+            </ul>
+        </div>
+
+<table>
+                    <tr>
+					<td><b> Order Number: </b> </td>
+					<td style="color:blue"> <b> {jsonBData.Order} </b> </td>
+				</tr>
+                <tr>
+					<td><b> Delivery Number: </b></td>
+					<td style="color:blue"><b> {targetedDelivery} </b></td>
+				</tr>  
+				<tr>
+					<td>Phone Number:</td>
+					<td style="color:blue">{topDetails.phoneNumber}</td>
+				</tr>
+				<tr>
+					<td>Fax Number:</td>
+					<td style="color:blue">{topDetails.faxNumber}</td>
+				</tr>
+				<tr>
+					<td>Ship Date:</td>
+					<td style="color:blue">{topDetails.shipDate}</td>
+                    <td>Customer PO:</td>
+					<td style="color:blue">{topDetails.customerPO}</td>
+				</tr>
+				<tr >
+					<td>Invoice Number:</td>
+		<!-- <td style="text-decoration:underline" >       
+			<a href="https://www.africau.edu/images/default/sample.pdf" target="_blank">012345678</a></td> -->
+
+		<!-- <td style="text-decoration:underline" ><a onclick={getInvoice} data-name={topDetails.invoiceNumber}>0123456678</a> </td> -->
+
+    <td style="text-decoration:underline">
+    <!--<a href= {hyperLinkPDF} 
+       target="_blank" 
+       onclick={getInvoice} 
+       data-name={topDetails.invoiceNumber}>
+       {topDetails.invoiceNumber}
+    </a> -->
+   <div class="link" onclick={getInvoice} data-name={targetedDelivery}>  {topDetails.invoiceNumber} </div>
+</td>
+
+		<!-- <td style="text-decoration:underline" ><a onclick={getInvoice} data-name={topDetails.invoiceNumber}>{topDetails.invoiceNumber}</a> </td> -->
+				<!--  -->
+		<!-- <td style="text-decoration:underline">
+			<iframe onclick={getInvoice} data-name={topDetails.invoiceNumber}> 0123456678 </iframe>
+		</td> -->
+
+				</tr>
+                <tr>
+                    <td>Delivery Weight:</td>
+            <td style="color:blue">{topDetails.deliveryWeight}</td>
+
+						<td>Pipe Weight:</td>
+            		<td style="color:blue">{topDetails.pipeWeight}</td>
+
+						<td>Fittings Weight:</td>
+                	<td style="color:blue">{topDetails.fittingsWeight}</td>
+                </tr>
+               <tr>
+					<td>Shipping Plant:</td>
+					<td style="color:blue">{topDetails.shippingPlant}</td>
+				</tr>
+                <tr>
+					<td>Carrier Name:</td>
+					<td style="color:blue">{topDetails.carrierName}</td>
+				</tr>
+                   <tr>
+					<td>Trailer Number:</td>
+					<td style="color:blue">{topDetails.trailerNumber}</td>
+
+					<td>Load Number:</td>
+					<td style="color:blue">{topDetails.loadNumber}</td>
+
+					<td>Stop Number:</td>
+                	<td style="color:blue">{topDetails.stopNumber}</td>
+                </tr>
+
+</table>
+    </div>
+<div class="scroll">
+<table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered slds-table_striped slds-m-top_large" aria-label="Example table of Opportunities with striped rows">
+<thead>
+<tr class="slds-line-height_reset">
+
+<template for:each={keys} for:item="key">
+<th key={key.id} class="header" scope="col">
+<div class="slds-truncate" title="Item">{key.label}</div>
+</th>
+</template>
+
+</tr>
+</thead>
+
+<tbody>
+<template for:each={currentPageData} for:item="obj">   
+<tr key={obj.id} class="slds-hint-parent">
+<th data-label="Item"  scope="row">
+<div class="slds-truncate select" title="10">{obj.Item}
+</div>
+</th>
+<td data-label="Material">
+<div class="slds-truncate" title="PVC 04200 0800">{obj.Material}</div>
+</td>
+<td data-label="Material Description">
+<div class="slds-truncate" title="2x20 DVW SCH 40 FOAM CORE PIPE">{obj.MaterialDescription}</div>
+</td>
+<td data-label="Ordered QTY">
+<div class="slds-truncate" title="8880">{obj.OrderQty}</div>
+</td>
+<td data-label="Delivered Qty">
+<div class="slds-truncate" title="8880">{obj.DeliveryQty}</div>
+</td>
+<td data-label="Pro Number">
+<div class="slds-truncate" title="">{obj.proNumber}</div>
+</td>
+
+</tr>
+</template>
+</tbody>
+</table>
+</div>
+<div class="pagination">
+<template if:false={hidePrevLink}>
+  <button onclick={handlePrevClick} class="slds-m-right_medium submitBtn" disabled={isPrevDisabled}>Previous</button>
+</template>
+ <template if:false={hideNextLink}>
+  <button onclick={handleNextClick} class="submitBtn">Next</button>
+ </template>
+ </div>
+
+</lightning-card>
+</template>
+	</template>
+    <template if:true={navagatetosapinfo}>
+<c-sap_info_comp rec-id={recordId}></c-sap_info_comp>
+    </template>
+	 <template if:true={showchild}>
+<c-sap_order_details json-c-data={jsonCData} order-number={jsonBData.Order}></c-sap_order_details>
+    </template>
+
+<!-- <template lwc:if={invoiceModal}>
+    
+  <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01"
+                class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <div class="slds-modal__header ao-background-colour_brand-blue aob_header_title">
+                        <lightning-icon style="float: right;cursor:pointer" icon-name="utility:close"
+                                alternative-text="close"
+                                variant="inverse"
+                                size="x-small"  onclick={handleCloseModal} ></lightning-icon>
+                            <span class="slds-assistive-text">Close</span>
+                    </div>
+                    <div class="slds-modal__content slds-p-around_medium aob_header_sub_title" id="modal-content-id-1">
+                        <h2 class="caseNumber">0123456
+                            </h2>
+                    </div>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+
+</template>
+ -->
+</template>

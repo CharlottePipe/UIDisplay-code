@@ -1,0 +1,145 @@
+<template>
+    <template if:false={navagatetosapinfo}>
+    <template if:true={orderDetails}>
+        <div class="exampleHolder">
+        <lightning-spinner if:true={isLoading} alternative-text="Loading" size="large"></lightning-spinner>
+    </div>
+<lightning-card >
+    <!-- <button onclick={navigatetoSapInfo} class="submitBtn">back to </button> -->
+    <lightning-icon icon-name="utility:home" class="submitBtn small-icon" alternative-text="BackTohome" onclick={navigatetoSapInfo} >Back To Home</lightning-icon>
+
+ <div class="Order_info slds-p-horizontal_small slds-m-bottom_large"> 
+            <ul class="details">
+                <li> <b> Sold To: </b> </li>
+            <li class="text-container"> {topDetails.soldTo} </li>
+            <!-- <li> 290 ANSIN ROAD </li>
+            <li> ROCKLEDGE FL 32955 </li>
+            <li> US </li> -->
+            </ul>   
+            <ul>
+             <li> <b> Ship To: </b> </li>
+            <li  class="text-container">{topDetails.shipTo} </li>
+            <!-- <li> 290 ANSIN ROAD </li>
+            <li> ROCKLEDGE FL 32955 </li>
+            <li> US </li> -->
+            </ul>
+        </div>
+
+<div class="main_details slds-p-horizontal_small"> 
+    <div class="info">
+            <ul>
+            <li> <b>Order Number: </b></li>
+            <li> Proposed Ship Date: </li>
+            <li> Order Weight: </li>
+            <li> Truckload%: </li>
+            <li> Volume: </li>
+            </ul>   
+            <ul class="slds-p-left_xx-large" style="color:blue" >
+                <li> <b> {jsonCData.Order} </b> </li>
+                 <li> {topDetails.proposedshipDate} </li>
+            <li> {topDetails.orderWeight}</li>
+            <li> {topDetails.truckload} </li>
+            <li> {topDetails.volume} </li>
+            </ul>
+        </div>
+
+        <div class="info">
+            <ul>
+            <li> PO Date: </li>
+            <li> Pipe Weight: </li>
+            <li> TL% Pipe </li>
+            <li> Pipe T/L Factor: </li>
+            </ul>   
+            <ul class="slds-p-left_xx-large" style="color:blue">
+                 <li> {topDetails.pODate} </li>
+            <li> {topDetails.pipeWeight} </li>
+            <li> {topDetails.tL_Pipe} </li>
+            <li> {topDetails.pipeT_lFactor} </li>
+            </ul>
+        </div>
+
+        <div class="info">
+            <ul>
+                <li> Customer PO: </li>
+            <li> Fittings Weight: </li>
+            <li> TL% Fittings </li>
+            </ul>   
+            <ul class="slds-p-left_xx-large" style="color:blue">
+                 <li> {topDetails.customerPO} </li>
+            <li> {topDetails.fittingsWeight} </li>
+            <li> {topDetails.tL_fittings} </li>
+            </ul>
+        </div>
+
+</div>
+<div class="scroll">
+<table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered slds-table_striped slds-m-top_x-large" aria-label="Example table of Opportunities with striped rows">
+<thead>
+<tr class="slds-line-height_reset">
+
+<template for:each={keys} for:item="key">
+<th key={key.id} class="header" scope="col">
+<div class="slds-truncate" title="Item">{key.label}</div>
+</th>
+</template>
+
+</tr>
+</thead>
+
+<tbody>
+<template for:each={currentPageData} for:item="obj" for:index="index">
+<tr  key={obj.id} class="slds-hint-parent">
+
+<th data-label="Item" scope="row">
+<div class="slds-truncate" title="10">
+{obj.Item}
+</div>
+</th>
+
+<td data-label="Material">
+<div class="slds-truncate" title="PVC 04200 0800">{obj.Material}</div>
+</td>
+<td data-label="Material Description">
+<div class="slds-truncate" title="2x20 DVW SCH 40 FOAM CORE PIPE">{obj.MaterialDescription}</div>
+</td>
+<td data-label="QTY">
+<div class="slds-truncate" title="8880">{obj.OrderQty}</div>
+</td>
+<td data-label="Plant">
+<div class="slds-truncate" title="PLNC">{obj.Plant}</div>
+</td>
+<td style="color:blue;text-decoration: underline;" data-label="Delivery" data-name={obj.Delivery} data-text={orderNumber}  data-index ={index} onclick={moveToDelivery} >
+<div class="slds-truncate select" title="0083887463">{obj.Delivery}</div>
+</td>
+
+<td data-label="QTY">
+<div class="slds-truncate" title="8880">{obj.DeliveryQty}</div>
+</td>
+</tr>
+</template>
+
+</tbody>
+</table>
+</div>
+<div class="pagination">
+<!-- <button onclick={handlePrevClick} class="slds-m-right_medium">Previous</button> 
+<button onclick={handleNextClick} >Next</button> -->
+<template if:false={hidePrevLink}>
+  <button onclick={handlePrevClick} class="slds-m-right_medium submitBtns" disabled={isPrevDisabled}>Previous</button>
+</template>
+ <template if:false={hideNextLink}>
+  <button onclick={handleNextClick} class="submitBtns">Next</button>
+ </template>
+ </div>
+
+</lightning-card>
+    </template>
+
+    <template if:true={deliveryDetails}>
+<c-sap_delivery_details json-b-data={getDatafromChild} json-c-data={jsonCData} targeted-delivery={targetValue} order-number={orderNumber} weights-data={weightsData}></c-sap_delivery_details>
+    </template>
+    </template>
+    <template if:true={navagatetosapinfo}>
+<c-sap_info_comp rec-id={recordId}></c-sap_info_comp>
+    </template>
+</template>

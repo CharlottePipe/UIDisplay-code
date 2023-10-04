@@ -1,0 +1,241 @@
+<template>
+    <template if:true={showparent}>
+      <div class="exampleHolder">
+        <lightning-spinner if:true={isLoading} alternative-text="Loading" size="large"></lightning-spinner>
+    </div>
+<lightning-card>
+        <h3 slot="title">
+            <lightning-icon icon-name="standard:account"  class="slds-m-right_medium" size="small"></lightning-icon>
+            <b>Customer Details</b>
+        </h3>
+        <div class="Customer_info slds-p-horizontal_small"> 
+            <ul class=Details>
+                <li> Customer Number: {topDetails.customerNumber} </li>
+                <li> Name: {topDetails.name} </li>
+                <li> Phone: {topDetails.phone}</li>
+                <li> Fax: {topDetails.fax} </li>
+                <li> Email Address: {topDetails.emailAddress}</li>
+            </ul>   
+            <ul>
+                <li> Street: {topDetails.street}</li>
+                <li> City: {topDetails.city} </li>
+                <li> Region: {topDetails.region}</li>
+                <li> PostalCode: {topDetails.postalCode}</li>
+                <li> Country: {topDetails.country} </li>
+            </ul>
+        </div>
+<template if:false={noDataFound}>
+<div class="scroll">    
+<table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered slds-table_striped" aria-label="Example table of Opportunities with vertical borders">
+<thead>
+  <tr class="slds-line-height_reset">
+    <th class="header" scope="col">
+      <div class="slds-truncate" title=""></div>
+    </th>
+    <template for:each={keys} for:item="key">
+      <th key={key.fieldName} class="header" scope="col">
+        <div class="slds-truncate" title={key.fieldName}>{key.label}</div>
+      </th>
+    </template>
+  </tr>
+</thead>
+
+
+
+<!-- <thead>
+  <tr class="slds-line-height_reset">
+    <th class="header" scope="col">
+      <div class="slds-truncate" title=""></div>
+    </th>
+    <template for:each={keys} for:item="key">
+      <th key={key.fieldName} class="header" scope="col">
+        <div class="slds-truncate" title={key.fieldName}>{key.label}</div>
+      </th>
+    </template>
+  </tr>
+</thead>
+ -->
+<tbody>
+<template for:each={currentPageData} for:item="obj" for:index="index">
+<tr key={obj.id} class="slds-hint-parent">
+
+<th data-label="" scope="row">
+<div class="slds-truncate" title="Cloudhub">
+<lightning-icon style="color:blue;text-decoration: underline;" icon-name="utility:search" class="select" alternative-text="Search"  size="xx-small" data-name={obj.Order}   data-index ={index} onclick={childcomponent} ></lightning-icon>
+</div>
+</th>
+
+<td data-label="Status">
+<div class="slds-truncate" title="C">{obj.Status}</div>
+</td>
+<td data-label="Order#">
+    <div class="slds-truncate" title={obj.Order}>{obj.Order}</div>
+</td>
+
+
+<td data-label="Div">
+<div class="slds-truncate" title="PL">{obj.Division}</div>
+</td>
+<td data-label="Plant">
+<div class="slds-truncate" title="PLNC">{obj.Plant}</div>
+</td>
+<td data-label="PO Date">
+<div class="slds-truncate" title="01/03/2023">{obj.PODate}</div>
+</td>
+<td data-label="Customer PO">
+<div class="slds-truncate" title="00635-062789">{obj.PO}</div>
+</td>
+<td data-label="Sold To Name">
+<div class="slds-truncate" title="ROCKLEDGE WINSUPPLY - 635">{obj.SoldToName}</div>
+</td>
+<td data-label="Ship To Name">
+<div class="slds-truncate" title="ROCKLEDGE WINSUPPLY - 635">{obj.ShipToName}</div>
+</td>
+<td data-label="Customer Number">
+<div class="slds-truncate" title="Customer Number">{obj.SoldTo}</div>
+</td>
+<td data-label="CommissionGroup">
+<div class="slds-truncate" title="P">{obj.CommissionGroup}</div>
+</td>
+</tr>
+</template>
+</tbody>
+</table>
+</div>
+<div class="pagination">
+<!-- <button onclick={handlePrevClick} class="slds-m-right_medium">Previous</button> 
+<button onclick={handleNextClick} >Next</button> -->
+<template if:false={hidePrevLink}>
+  <button onclick={handlePrevClick} class="slds-m-right_medium submitBtn" disabled={isPrevDisabled}>Previous</button>
+</template>
+ <template if:false={hideNextLink}>
+  <button onclick={handleNextClick} class="submitBtn" >Next</button>
+ </template>
+ </div>
+ </template>
+ <template if:true={noDataFound}>
+   <div class="slds-m-top_large">
+    <b>No data found </b>
+  </div>
+<table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered slds-table_striped slds-m-top_large" aria-label="Example table of Opportunities with striped rows">
+<thead>
+
+<tr class="slds-line-height_reset" if:true={noDataFound}>
+  <th  class="header" scope="col">
+<div class="slds-truncate" title=""></div>
+</th>
+<th  class="header" scope="col">
+<div class="slds-truncate" title="Item">Status</div>
+</th>
+
+<th  class="header" scope="col">
+<div class="slds-truncate" title="Item">Order#</div>
+</th>
+<th  class="header" scope="col">
+<div class="slds-truncate" title="Item">Division</div>
+</th>
+<th  class="header" scope="col">
+<div class="slds-truncate" title="Item">Plant</div>
+</th>
+<th  class="header" scope="col">
+<div class="slds-truncate" title="Item">PO Date</div>
+</th>
+<th  class="header" scope="col">
+<div class="slds-truncate" title="Item">PO#</div>
+</th>
+<th  class="header" scope="col">
+<div class="slds-truncate" title="Item">Sold To Name</div>
+</th>
+<th  class="header" scope="col">
+<div class="slds-truncate" title="Item">Ship To Name</div>
+</th>
+<th  class="header" scope="col">
+<div class="slds-truncate" title="Item">Sold To#</div>
+</th>
+<th  class="header" scope="col">
+<div class="slds-truncate" title="Item">Commission Group</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr  class="slds-hint-parent">
+
+<th data-label="" scope="row">
+<div class="slds-truncate" title="Cloudhub">
+<lightning-icon style="color:blue;text-decoration: underline;" icon-name="utility:search" class="select" alternative-text="Search"  size="xx-small"  ></lightning-icon>
+</div>
+</th>
+
+<td data-label="Status">
+<div class="slds-truncate" title="C"></div>
+</td>
+<td data-label="Order#">
+    <div class="slds-truncate"></div>
+</td>
+<td data-label="Div">
+<div class="slds-truncate"></div>
+</td>
+<td data-label="Plant">
+<div class="slds-truncate" title="PLNC"></div>
+</td>
+<td data-label="PO Date">
+<div class="slds-truncate" title="01/03/2023"></div>
+</td>
+<td data-label="Customer PO">
+<div class="slds-truncate" title="00635-062789"></div>
+</td>
+<td data-label="Sold To Name">
+<div class="slds-truncate" title="ROCKLEDGE WINSUPPLY - 635"></div>
+</td>
+<td data-label="Ship To Name">
+<div class="slds-truncate" title="ROCKLEDGE WINSUPPLY - 635"></div>
+</td>
+<td data-label="Customer Number">
+<div class="slds-truncate" title="Customer Number"></div>
+</td>
+<td data-label="CommissionGroup">
+<div class="slds-truncate" title="P"></div>
+</td>
+</tr>
+</tbody>
+<!-- </template> -->
+</table>
+ </template>
+ <br/>
+    </lightning-card>
+       <div class="scroll">
+    <lightning-card class="form">
+        <h3 slot="title">
+            <lightning-icon icon-name="custom:custom18"  class="slds-m-right_medium" size="small"></lightning-icon>
+            <b>Advanced Sales Document Search</b>
+        </h3>
+        <template lwc:if={soldto}>
+        <div class="slds-size_5-of-12">
+      <lightning-input type="text"  variant="standard" name="soldTo" label="Sold To" onchange={genericChange}></lightning-input>
+        </div>
+        </template>
+        <div class="slds-grid">
+    <div class="slds-size_5-of-12">
+      <lightning-input type="text"  variant="standard" name="poNumber" label="PO Number" onchange={genericChange}></lightning-input>
+        </div>
+        <div class="slds-size_5-of-12 slds-m-left_large">
+      <lightning-input type="text"  variant="standard" name="division" label="Division" onchange={genericChange} > </lightning-input>
+        </div>
+
+        </div>
+<div class="slds-grid slds-m-bottom_large">
+<lightning-input class="slds-size_5-of-12" type="date" variant="standard" name="from" label="From"  onchange={genericChange} ></lightning-input>
+<lightning-input class="slds-size_5-of-12 slds-m-left_large" type="date" variant="standard" name="to" label="To" onchange={genericChange}></lightning-input>
+</div>
+
+<lightning-button class="slds-align_absolute-center" variant="Brand" label="Search" title="Search" onclick={handleClick}></lightning-button>
+    </lightning-card>
+    </div>
+    </template>
+
+    <template if:true={showchild}>
+<c-sap_order_details json-c-data={dataPassChild} order-number={orderNumber}></c-sap_order_details>
+    </template>
+
+ 
+</template>

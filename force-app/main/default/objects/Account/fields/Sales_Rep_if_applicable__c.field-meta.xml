@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Rep_if_applicable__c</fullName>
+    <description>List of Sales Reps in Salesforce</description>
+    <externalId>false</externalId>
+    <label>Sales Rep (if applicable)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Battersby Danielson Azbell &amp; Associates	85</fullName>
+                <default>false</default>
+                <label>Battersby Danielson Azbell &amp; Associates	85</label>
+            </value>
+            <value>
+                <fullName>Billingsley BWC	10</fullName>
+                <default>false</default>
+                <label>Billingsley BWC	10</label>
+            </value>
+            <value>
+                <fullName>Burke Agency Inc	93</fullName>
+                <default>false</default>
+                <label>Burke Agency Inc	93</label>
+            </value>
+            <value>
+                <fullName>BWA South Inc	08</fullName>
+                <default>false</default>
+                <label>BWA South Inc	08</label>
+            </value>
+            <value>
+                <fullName>Central Sales, Inc	43</fullName>
+                <default>false</default>
+                <label>Central Sales, Inc	43</label>
+            </value>
+            <value>
+                <fullName>Davenport Associates	21</fullName>
+                <default>false</default>
+                <label>Davenport Associates	21</label>
+            </value>
+            <value>
+                <fullName>Distributor Sales Inc	24</fullName>
+                <default>false</default>
+                <label>Distributor Sales Inc	24</label>
+            </value>
+            <value>
+                <fullName>Empire State Associates	48</fullName>
+                <default>false</default>
+                <label>Empire State Associates	48</label>
+            </value>
+            <value>
+                <fullName>FERGUSON DIST CENTER	102</fullName>
+                <default>false</default>
+                <label>FERGUSON DIST CENTER	102</label>
+            </value>
+            <value>
+                <fullName>FERGUSON - METROPLEX	114</fullName>
+                <default>false</default>
+                <label>FERGUSON - METROPLEX	114</label>
+            </value>
+            <value>
+                <fullName>Ferguson-Special	14</fullName>
+                <default>false</default>
+                <label>Ferguson-Special	14</label>
+            </value>
+            <value>
+                <fullName>Hollabaugh Brothers &amp; Assoc	56</fullName>
+                <default>false</default>
+                <label>Hollabaugh Brothers &amp; Assoc	56</label>
+            </value>
+            <value>
+                <fullName>HSA	47</fullName>
+                <default>false</default>
+                <label>HSA	47</label>
+            </value>
+            <value>
+                <fullName>Hugh M Cunningham	13</fullName>
+                <default>false</default>
+                <label>Hugh M Cunningham	13</label>
+            </value>
+            <value>
+                <fullName>Johnson &amp; White Sales Co	42</fullName>
+                <default>false</default>
+                <label>Johnson &amp; White Sales Co	42</label>
+            </value>
+            <value>
+                <fullName>Joyce Agency Inc	05</fullName>
+                <default>false</default>
+                <label>Joyce Agency Inc	05</label>
+            </value>
+            <value>
+                <fullName>Maloney &amp; Curcio Inc	73</fullName>
+                <default>false</default>
+                <label>Maloney &amp; Curcio Inc	73</label>
+            </value>
+            <value>
+                <fullName>Martin &amp; Smith Inc	50</fullName>
+                <default>false</default>
+                <label>Martin &amp; Smith Inc	50</label>
+            </value>
+            <value>
+                <fullName>Mega Western Sales	62</fullName>
+                <default>false</default>
+                <label>Mega Western Sales	62</label>
+            </value>
+            <value>
+                <fullName>Mid-America Marketing Inc	51</fullName>
+                <default>false</default>
+                <label>Mid-America Marketing Inc	51</label>
+            </value>
+            <value>
+                <fullName>Noland-CDC	17</fullName>
+                <default>false</default>
+                <label>Noland-CDC	17</label>
+            </value>
+            <value>
+                <fullName>OK Grp/HM Cunningham	68</fullName>
+                <default>false</default>
+                <label>OK Grp/HM Cunningham	68</label>
+            </value>
+            <value>
+                <fullName>Pacific Rim Partners	92</fullName>
+                <default>false</default>
+                <label>Pacific Rim Partners	92</label>
+            </value>
+            <value>
+                <fullName>Paramount Sales	58</fullName>
+                <default>false</default>
+                <label>Paramount Sales	58</label>
+            </value>
+            <value>
+                <fullName>Platsky Company	74</fullName>
+                <default>false</default>
+                <label>Platsky Company	74</label>
+            </value>
+            <value>
+                <fullName>P-M &amp; Associates	23</fullName>
+                <default>false</default>
+                <label>P-M &amp; Associates	23</label>
+            </value>
+            <value>
+                <fullName>Pulley &amp; Associates Inc	65</fullName>
+                <default>false</default>
+                <label>Pulley &amp; Associates Inc	65</label>
+            </value>
+            <value>
+                <fullName>Rich Sales Inc	69</fullName>
+                <default>false</default>
+                <label>Rich Sales Inc	69</label>
+            </value>
+            <value>
+                <fullName>RKR	75</fullName>
+                <default>false</default>
+                <label>RKR	75</label>
+            </value>
+            <value>
+                <fullName>RMI	44</fullName>
+                <default>false</default>
+                <label>RMI	44</label>
+            </value>
+            <value>
+                <fullName>Smith &amp; Stevenson Co Inc	88</fullName>
+                <default>false</default>
+                <label>Smith &amp; Stevenson Co Inc	88</label>
+            </value>
+            <value>
+                <fullName>Southern Dist Center	101</fullName>
+                <default>false</default>
+                <label>Southern Dist Center	101</label>
+            </value>
+            <value>
+                <fullName>Southwestern Mechanical Sales	64</fullName>
+                <default>false</default>
+                <label>Southwestern Mechanical Sales	64</label>
+            </value>
+            <value>
+                <fullName>Spirit Group Inc	89</fullName>
+                <default>false</default>
+                <label>Spirit Group Inc	89</label>
+            </value>
+            <value>
+                <fullName>T J Higgins Company	81</fullName>
+                <default>false</default>
+                <label>T J Higgins Company	81</label>
+            </value>
+            <value>
+                <fullName>Triumph Sales Inc	57</fullName>
+                <default>false</default>
+                <label>Triumph Sales Inc	57</label>
+            </value>
+            <value>
+                <fullName>UNITED PIPE AND STEEL	115</fullName>
+                <default>false</default>
+                <label>UNITED PIPE AND STEEL	115</label>
+            </value>
+            <value>
+                <fullName>Will &amp; Pierce Agency	61</fullName>
+                <default>false</default>
+                <label>Will &amp; Pierce Agency	61</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

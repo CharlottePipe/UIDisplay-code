@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TSD_Account_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>TSD Account Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Engineering Firm</fullName>
+                <default>false</default>
+                <label>Engineering Firm</label>
+            </value>
+            <value>
+                <fullName>Codes &amp; Standards</fullName>
+                <default>false</default>
+                <label>Codes &amp; Standards</label>
+            </value>
+            <value>
+                <fullName>Facilities/End User</fullName>
+                <default>false</default>
+                <label>Facilities/End User</label>
+            </value>
+            <value>
+                <fullName>Manufacturer Rep</fullName>
+                <default>false</default>
+                <label>Manufacturer Rep</label>
+            </value>
+            <value>
+                <fullName>Industry Organization</fullName>
+                <default>false</default>
+                <label>Industry Organization</label>
+            </value>
+            <value>
+                <fullName>Manufacturer</fullName>
+                <default>false</default>
+                <label>Manufacturer</label>
+            </value>
+            <value>
+                <fullName>Architect</fullName>
+                <default>false</default>
+                <label>Architect</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>
